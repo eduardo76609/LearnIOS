@@ -10,16 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func loadView() {
+        super.loadView()
+        print("Se activo func loadView")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print("Se activo func viewDidLoad")
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print("Se activo func viewWillAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("Se activo func viewWillDisappear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("Se activo func viewDidAppear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        print("se activo func viewDidDisappear")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        print("Se activo func didReceiveMemoryWarning")
     }
 
-
 }
-
